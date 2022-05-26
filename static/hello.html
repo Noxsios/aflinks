@@ -9,9 +9,9 @@
   <body>
     <div id="hydrate"></div>
   </body>
-  <script type="" module>
-    await fetch("/api/echo").then(res => res.json()).then(data => {
-      document.getElementById("hydrate").innerHTML = data.message;
+  <script type="module">
+    await fetch("/api/echo").then(res => res.text()).then(data => {
+      document.getElementById("hydrate").innerHTML = data;
     });
   </script>
 </html>
