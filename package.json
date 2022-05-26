@@ -1,0 +1,14 @@
+{
+  "name": "aflinks",
+  "version": "1.0.0",
+  "main": "main.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "wrangler pages functions build --outfile static/_worker.js",
+    "start": "wrangler pages dev static -k KV"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^3.11.0",
+    "pages-plugin-twind": "^1.0.0"
+  }
+}
