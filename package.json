@@ -3,15 +3,12 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "build:functions": "wrangler pages functions build --outfile static/_worker.js",
-    "build": "echo 'Blank'",
+    "build": "wrangler pages functions build --outfile static/_worker.js",
     "start": "wrangler pages dev static -k KV"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^3.11.0",
-    "pages-plugin-twind": "^1.0.0"
-  },
-  "dependencies": {
+    "pages-plugin-twind": "^1.0.0",
     "wrangler": "2"
   }
 }
