@@ -563,10 +563,10 @@ undici@4.13.0:
   resolved "https://registry.yarnpkg.com/undici/-/undici-4.13.0.tgz#7d10fe150c3241a6b3b0eba80eff59c9fb40f359"
   integrity sha512-8lk8S/f2V0VUNGf2scU2b+KI2JSzEQLdCyRNRF3XmHu+5jectlSDaPSBCXAHFaUlt1rzngzOBVDgJS9/Gue/KA==
 
-wrangler@2:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/wrangler/-/wrangler-2.0.6.tgz#a7c4de4720ac2bc594dbae619fff6f43e0fdc737"
-  integrity sha512-LO3iTWZCPY5cWg5Ocx0j3awchBAfJtHTa21MFv0/m/AJC5FdATvH/agZ100dkOaF3/qmQVFsMI3EDx9/PiRjmg==
+wrangler@2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/wrangler/-/wrangler-2.0.2.tgz#4ecb57b7fc2188e7f4b1d988ff789b4af42ec3c7"
+  integrity sha512-K9e6W4FKgy1dh4xX9/XJaQwqz6Ta6HQKpm1KCi1B0G60rnpSGKZskGSHZUX4i5S+21jx+/0oucwZc5cdv+/cSw==
   dependencies:
     "@esbuild-plugins/node-globals-polyfill" "^0.1.1"
     "@esbuild-plugins/node-modules-polyfill" "^0.1.4"
