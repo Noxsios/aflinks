@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "wrangler pages functions build --outfile static/_worker.js",
+    "build:functions": "wrangler pages functions build --outfile static/_worker.js",
+    "build": "echo 'Blank'",
     "start": "wrangler pages dev static -k KV"
   },
   "devDependencies": {
