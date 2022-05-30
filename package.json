@@ -3,11 +3,22 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "wrangler pages functions build --outfile static/_worker.js",
-    "start": "wrangler pages dev static -k KV"
+    "start:cf": "wrangler pages dev static -k KV",
+    "build:cf": "wrangler pages functions build --outfile static/_worker.js",
+    "start:tw": "npx tailwindcss -i ./static/css/base.css -o ./static/css/tailwind.css --watch",
+    "build:tw": "npx tailwindcss -i ./static/css/base.css -o ./static/css/tailwind.css",
+    "build": "yarn build:tw && node ./scripts/build.cjs",
+    "lint": "eslint ."
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^3.11.0",
+    "@minify-html/js": "^0.8.0",
+    "@tailwindcss/forms": "^0.5.2",
+    "eslint": "^8.16.0",
+    "eslint-plugin-html": "^6.2.0",
+    "faunadb": "^4.5.4",
+    "glob": "^8.0.3",
+    "tailwindcss": "^3.0.24",
     "wrangler": "2.0.7"
   }
 }
