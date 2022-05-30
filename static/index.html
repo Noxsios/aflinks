@@ -12,14 +12,32 @@
     import nav from "./js/nav.js";
     nav.render();
   </script>
+
   <body>
-    <div class="flex flex-col items-center justify-center min-h-screen">
-      <input
-        class="block w-full border-gray-300 rounded-none focus:ring-indigo-500 focus:border-indigo-500 rounded-r-md sm:text-sm"
-        type="search"
-        placeholder="Search"
-        id="search"
-      />
-    </div>
+    <!-- <main class="flex min-h-screen"> -->
+    <main class="mt-12 lg:mt-24">
+      <h1 class="mb-6 text-4xl text-center lg:text-8xl">
+        <code>aflinks</code>
+      </h1>
+      <div class="flex items-center justify-center w-full">
+        <input
+          class="w-8/12 transition-shadow duration-200 border-gray-300 rounded-full sm:p-2 lg:p-6 sm:text-xl lg:text-3xl hover:drop-shadow-md indent-4"
+          type="search"
+          placeholder=""
+          id="search" />
+      </div>
+      <div class="flex items-center justify-center w-full gap-4 mt-6">
+        <button
+          class="p-2 transition-shadow rounded-md bg-gray-50 hover:drop-shadow-md hover:border"
+          type="button">
+          Link Search
+        </button>
+        <button
+          class="p-2 transition-shadow rounded-md bg-gray-50 hover:drop-shadow-md hover:border"
+          type="button">
+          I'm Feeling Frosty
+        </button>
+      </div>
+    </main>
   </body>
 </html>

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "start:cf": "wrangler pages dev static -k KV",
+    "start:cf": "wrangler pages dev static -k KV --live-reload",
     "build:cf": "wrangler pages functions build --outfile static/_worker.js",
     "start:tw": "npx tailwindcss -i ./static/css/base.css -o ./static/css/tailwind.css --watch",
     "build:tw": "npx tailwindcss -i ./static/css/base.css -o ./static/css/tailwind.css",
