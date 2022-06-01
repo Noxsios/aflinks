@@ -29,7 +29,7 @@
 
   <body>
     <main>
-      <div class="flex my-8 ml-8">
+      <div class="sticky top-0 flex py-8 ml-8 bg-white border-b">
         <code class="my-auto text-2xl font-bold"><a href="/">afsearch</a></code>
         <input
           class="flex-1 max-w-3xl p-3 ml-8 transition-shadow duration-200 border-gray-300 rounded-full hover:drop-shadow-md indent-4"
@@ -53,9 +53,24 @@
 
       <hr />
 
-      <div>
-        <article>resullt 1 here</article>
-      </div>
+      <div class="flex flex-col gap-8 mt-6 ml-44" id="search-results"></div>
     </main>
+
+    <script type="module">
+      import { $ } from "./js/utils.js";
+      const tmpl = `<article>
+          <a href="https://razzle.cloud">
+            <code class="inline-block text-sm">https://razzle.cloud</code>
+            <br />
+            <h2 class="inline-block text-lg font-semibold text-blue-600 hover:underline">
+              \`og:title\` attribute of the website
+            </h2>
+          </a>
+          <p class="text-sm">\`og:description\` attribute of the website</p>
+        </article>`;
+
+      const searchResults = $("#search-results");
+      searchResults.innerHTML = tmpl.repeat(20);
+    </script>
   </body>
 </html>
