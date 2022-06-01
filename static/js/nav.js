@@ -4,7 +4,7 @@ const nav = `
 <nav class="flex items-center justify-between flex-wrap flex-row-reverse bg-gray-500 p-6 w-full z-50 bottom-0 absolute">
     <div class="flex items-center flex-shrink-0 text-white mr-6">
     <span class="font-semibold text-xl tracking-tight select-none">
-        <code> aflinks <span class="hidden md:inline-block">- a better portal</span> </code>
+        <code> afsearch <span class="hidden md:inline-block">- a better portal</span> </code>
     </span>
     <img src="/img/favicon.ico" alt="logo" class="h-8 w-8 ml-2" />
     </div>
