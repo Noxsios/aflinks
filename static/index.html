@@ -29,8 +29,9 @@
       <div class="flex items-center justify-center w-full gap-4 mt-6">
         <button
           class="p-2 transition-shadow rounded-md bg-gray-50 hover:drop-shadow-md hover:border"
+          id="search-btn"
           type="button">
-          Link Search
+          Air Force Search
         </button>
         <button
           class="p-2 transition-shadow rounded-md bg-gray-50 hover:drop-shadow-md hover:border"
@@ -39,5 +40,26 @@
         </button>
       </div>
     </main>
+
+    <script type="module">
+      import { $ } from "./js/utils.js";
+
+      const searchInput = $("#search");
+
+      const performSearch = () => {
+        if (searchInput.value.length > 0) {
+          window.location.href = `/search?q=${searchInput.value}`;
+        }
+      };
+
+      searchInput.addEventListener("keyup", (e) => {
+        if (e.keyCode === 13) {
+          performSearch();
+        }
+      });
+
+      const searchButton = $("#search-btn");
+      searchButton.addEventListener("click", performSearch);
+    </script>
   </body>
 </html>

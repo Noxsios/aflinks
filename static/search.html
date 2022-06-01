@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View All</title>
+    <link rel="stylesheet" href="/css/tailwind.css" />
+    <script src="/js/nav.js" type="module"></script>
+  </head>
+
+  <script type="module">
+    import nav from "./js/nav.js";
+    nav.render();
+  </script>
+
+  <script type="module">
+    const query = new URLSearchParams(window.location.search);
+    const search = query.get("q");
+    const searchInput = document.getElementById("search");
+    searchInput.value = search;
+
+    const pageTitle = document.getElementsByTagName("title")[0];
+    pageTitle.innerText = `${search} - afsearch`;
+  </script>
+
+  <!-- <script>
+          searchInput.addEventListener("change",  () => {
+        const query = new URLSearchParams(window.location.search);
+        query.set("q", searchInput.value);
+        window.location.search = query.toString();
+      });
+  </script> -->
+
+  <body>
+    <main class="mb-20">{children}</main>
+  </body>
+</html>

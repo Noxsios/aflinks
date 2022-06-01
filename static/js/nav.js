@@ -23,9 +23,9 @@ const nav = `
 `;
 
 const routes = [
-  { href: "/", name: "Search" },
-  { href: "/new", name: "New" },
-  { href: "/viewAll", name: "View All" },
+  { href: "/", name: "Home" },
+  { href: "/add", name: "Add" },
+  // { href: "/search", name: "Search" },
   {
     href: "/about",
     name: "About",
