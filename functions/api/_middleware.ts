@@ -42,15 +42,10 @@ export function getFaunaError(error) {
 //   Update,
 // } = faunadb.query;
 
-const hello = async ({ next }) => {
-  const response = await next();
-  response.headers.set("X-Hello", "Hello from functions Middleware!");
-  return response;
-};
-
 const configureFauna = async (context) => {
   const client = new faunadb.Client({
     secret: context.env.FAUNA_SECRET,
+    domain: "db.us.fauna.com",
   });
   context.data.client = client;
   return await context.next();
@@ -64,4 +59,4 @@ const errorHandler = async ({ next }) => {
   }
 };
 
-export const onRequest = [errorHandler, hello, configureFauna];
+export const onRequest = [errorHandler, configureFauna];
