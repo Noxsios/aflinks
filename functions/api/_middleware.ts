@@ -56,4 +56,12 @@ const configureFauna = async (context) => {
   return await context.next();
 };
 
-export const onRequest = [hello, configureFauna];
+const errorHandler = async ({ next }) => {
+  try {
+    return await next();
+  } catch (err) {
+    return new Response(`${err.message}\n${err.stack}`, { status: 500 });
+  }
+};
+
+export const onRequest = [errorHandler, hello, configureFauna];
