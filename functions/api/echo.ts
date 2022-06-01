@@ -1,3 +1,5 @@
+import * as db from "faunadb";
+
 export async function onRequest(context) {
   // Contents of context object
   const {
@@ -9,5 +11,14 @@ export async function onRequest(context) {
     data, // arbitrary space for passing data between middlewares
   } = context;
 
-  return new Response(context.env.FAUNA_SECRET);
+  const q = db.query;
+
+  const all = await context.data.client.query(
+    q.Map(
+      q.Paginate(q.Match(q.Index("search-links"))),
+      q.Lambda("X", q.Get(q.Var("X")))
+    )
+  );
+
+  return new Response(JSON.stringify(all));
 }
