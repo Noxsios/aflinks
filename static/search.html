@@ -2,11 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>View All</title>
+    <title>afsearch</title>
     <link rel="stylesheet" href="/css/tailwind.css" />
-    <script src="/js/nav.js" type="module"></script>
   </head>
 
   <script type="module">
@@ -15,24 +14,48 @@
   </script>
 
   <script type="module">
-    const query = new URLSearchParams(window.location.search);
-    const search = query.get("q");
-    const searchInput = document.getElementById("search");
-    searchInput.value = search;
+    import { $ } from "./js/utils.js";
+    import searchbar from "./js/search.js";
+    searchbar.render($("#search"), $("#search-btn"));
 
-    const pageTitle = document.getElementsByTagName("title")[0];
-    pageTitle.innerText = `${search} - afsearch`;
+    const search = new URLSearchParams(window.location.search);
+    const query = search.get("q");
+    const searchInput = $("#search");
+    searchInput.value = query;
+
+    const pageTitle = $("title");
+    pageTitle.innerText = `${query} - afsearch`;
   </script>
 
-  <!-- <script>
-          searchInput.addEventListener("change",  () => {
-        const query = new URLSearchParams(window.location.search);
-        query.set("q", searchInput.value);
-        window.location.search = query.toString();
-      });
-  </script> -->
-
   <body>
-    <main class="mb-20">{children}</main>
+    <main>
+      <div class="flex my-8 ml-8">
+        <code class="my-auto text-2xl font-bold"><a href="/">afsearch</a></code>
+        <input
+          class="flex-1 max-w-3xl p-3 ml-8 transition-shadow duration-200 border-gray-300 rounded-full hover:drop-shadow-md indent-4"
+          type="text"
+          id="search" />
+        <button
+          id="search-btn"
+          type="button"
+          class="z-50 flex items-center justify-center w-12 -ml-12 rounded-full">
+          <svg
+            class="w-6 h-6 text-blue-500 hover:text-gray-500"
+            fill="currentColor"
+            viewBox="0 0 20 20">
+            <path
+              fill-rule="evenodd"
+              d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+              clip-rule="evenodd" />
+          </svg>
+        </button>
+      </div>
+
+      <hr />
+
+      <div>
+        <article>resullt 1 here</article>
+      </div>
+    </main>
   </body>
 </html>

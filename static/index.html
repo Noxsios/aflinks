@@ -43,23 +43,8 @@
 
     <script type="module">
       import { $ } from "./js/utils.js";
-
-      const searchInput = $("#search");
-
-      const performSearch = () => {
-        if (searchInput.value.length > 0) {
-          window.location.href = `/search?q=${searchInput.value}`;
-        }
-      };
-
-      searchInput.addEventListener("keyup", (e) => {
-        if (e.keyCode === 13) {
-          performSearch();
-        }
-      });
-
-      const searchButton = $("#search-btn");
-      searchButton.addEventListener("click", performSearch);
+      import search from "./js/search.js";
+      search.render($("#search"), $("#search-btn"));
     </script>
   </body>
 </html>

@@ -1,7 +1,7 @@
 import { $, h } from "./utils.js";
 
 const nav = `
-<nav class="flex items-center justify-between flex-wrap flex-row-reverse bg-gray-500 p-6 w-full z-50 bottom-0 absolute">
+<nav class="flex items-center justify-between flex-wrap flex-row-reverse bg-gray-500 p-6 w-full z-50 bottom-0 fixed">
     <div class="flex items-center flex-shrink-0 text-white mr-6">
     <span class="font-semibold text-xl tracking-tight select-none">
         <code> afsearch <span class="hidden md:inline-block">- a better portal</span> </code>

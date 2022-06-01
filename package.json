@@ -14,6 +14,7 @@
     "@cloudflare/workers-types": "^3.11.0",
     "@minify-html/js": "^0.8.0",
     "@tailwindcss/forms": "^0.5.2",
+    "@tailwindcss/typography": "^0.5.2",
     "eslint": "^8.16.0",
     "eslint-plugin-html": "^6.2.0",
     "faunadb": "^4.5.4",
